@@ -1,1 +1,64 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Movie Ticket</title>
+	<link rel="shortcut icon" href="dash.ico">
+	<script src="jquery.min.js"></script>
+	<style>
+
+	td  {
+		text-align:center;
+		color     :navy;
+		font-size : 40px;
+	}
+	table{
+		background-color:silver;
+	}
+</style>
+<script>
+
+
+</script>
+</head>
+<body onload="bodyload()" background="images/mvi4.jpg">
+	<form>
+		<table border="1" align="center" width="1000">
+			<marquee><tr><td colspan="3" bgcolor="mintcream"><marquee behavior="alternate"><h2>Book Movie Ticket Online</h2></marquee></td>
+			</tr>
+			<tr><td>Select   City</td><td id="lstCity" onchange="ShowCinema()"></td><td rowspan="4" id="poster"><img src="images/alt.jpg" alt="Coming Soon" width="400" height="400" id="pic"></td>
+			</tr>
+			<tr><td>Select Cinema</td><td id="lstCinema" onchange="ShowMovie()"></td>
+			</tr>
+			<tr><td>Select  Movie</td><td id="lstMovie" onchange="showTiming()"></td>
+			</tr>
+			<tr><td>Show   Timing</td><td id="lstTiming" onchange="ShowClass()"></td>
+			</tr>
+			<tr><td>Select  Class</td><td id="lstClass" onchange="ShowPrice()"></td><td rowspan="4" id="details" style="display:none;">
+
+				<table border="2" width="500">
+					<tr><td>Cinema</td><td id="cinema"></td>
+					</tr>
+					<tr><td>Movie Name</td><td id="mname"></td>
+					</tr>
+					<tr><td>Movie Timing</td><td id="timing"></td>
+					</tr>
+					<tr><td>Moive Class</td><td id="sclass"></td>
+					</tr>
+					<tr><td>No. Of Seats</td><td id="count"></td>
+					</tr>
+					<tr><td>Total Amount</td><td id="amount"></td>
+					</tr>
+					<tr><td colspan="2"><input type="button" value="Book Ticket" name="btnSubmit" id="btnSubmit"</td></tr>
+				</table>
+			</td>
+		</tr>
+		<tr><td>Ticket Price</td><td id="lstPrice"></td>
+		</tr>
+		<tr><td>No. Of Seats</td><td><input type="number" id="lstCount" name="lstCount" min="1" max="5" value="2"></td>
+		</tr>
+		<tr><td colspan="2"><input type="button" value="Continue" name="btn" id="btn" onclick="ShowDetails()"></td></marquee>
+		</table>
+	</form>
+</body>
+</html>
